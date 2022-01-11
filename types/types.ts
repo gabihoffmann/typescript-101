@@ -13,3 +13,7 @@ isString = `olá`
 // number (int, float, hex, binary)
 let isNumber: number
 isNumber = 0xff0
+
+// array
+let isArray: number[]
+isArray = [0, 1, 2, 3, 4]
