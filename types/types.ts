@@ -17,3 +17,6 @@ isNumber = 0xff0
 // array
 let isArray: number[]
 isArray = [0, 1, 2, 3, 4]
+
+let anotherArray: Array<number>
+anotherArray = [4, 3, 2, 1, 0]
