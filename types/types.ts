@@ -31,3 +31,10 @@ enum isEnum {
   second = 2,
 }
 
+// any 
+// !!!Warning, this not cool 
+let anything: any
+anything = 0
+anything = 'a'
+anything = [1, 2, 3]
+anything = true
