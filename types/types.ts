@@ -48,3 +48,9 @@ function willReturnVoid(): void {
 function error(): never {
   throw new Error('error')
 }
+
+// object
+let isObject: object
+isObject = {
+  key: 'value'
+}
