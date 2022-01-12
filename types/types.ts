@@ -43,3 +43,8 @@ anything = true
 function willReturnVoid(): void {
   console.log('this function does not return value')
 }
+
+// never
+function error(): never {
+  throw new Error('error')
+}
