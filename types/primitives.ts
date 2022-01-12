@@ -54,3 +54,9 @@ let isObject: object
 isObject = {
   key: 'value'
 }
+
+// Type Inference
+// TS used inference to provide type information
+let newString = 'defined string'
+newString = 'new string value'
+newString = 1 
