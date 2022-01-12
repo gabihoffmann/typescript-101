@@ -24,3 +24,10 @@ anotherArray = [4, 3, 2, 1, 0, 1]
 // tuple
 let isTuple: [number, string, boolean]
 isTuple = [1, 'text', true]
+
+// enum
+enum isEnum {
+  first = 1,
+  second = 2,
+}
+
