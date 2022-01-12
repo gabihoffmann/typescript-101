@@ -38,3 +38,8 @@ anything = 0
 anything = 'a'
 anything = [1, 2, 3]
 anything = true
+
+// void
+function willReturnVoid(): void {
+  console.log('this function does not return value')
+}
