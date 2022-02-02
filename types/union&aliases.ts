@@ -27,5 +27,19 @@ type AccountInfo = {
 // A optional properties means the type can be undefined
 const account: AccountInfo = {
   id: 123,
-  name: "Gabi"
+  name: "Gabriella"
+}
+
+type CharInfo = {
+  nickname: string,
+  level: number
+}
+
+type PlayerInfo = AccountInfo & CharInfo //intersection
+
+const player: PlayerInfo = {
+  name: 'Gabriella',
+  nickname: 'Gabi',
+  id: 123,
+  level: 1000
 }
