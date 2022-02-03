@@ -1,6 +1,6 @@
 class UserAccount {
-  name: string;
-  age: number;
+  readonly name: string;
+  private age: number;
 
   constructor(name: string, age: number) {
     this.name = name;
@@ -18,8 +18,8 @@ console.log(gabi.name)
 gabi.logDetails()
 
 class CharAccount extends UserAccount {
-  nickname: string
-  level: number
+  private nickname: string
+  readonly level: number
 
   constructor(nickname: string, level: number, name: string, age: number) {
     super(name, age)
@@ -28,12 +28,14 @@ class CharAccount extends UserAccount {
   }
 
   logLevel(): void {
-    console.log(`This player are ${this.nickname} and have ${this.level} xp`)
+    console.log(`This player are ${this.nickname} and have ${this.level} xp  - ${this.age} - ${this.name}`)
   }
 }
 
 const hoffmann = new CharAccount('GabiHoffmann', 1000, 'Gabi', 29)
 console.log(hoffmann)
 console.log(hoffmann.nickname)
+console.log(hoffmann.level)
+hoffmann.level = 2000
 hoffmann.logDetails()
 hoffmann.logLevel()
