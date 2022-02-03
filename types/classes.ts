@@ -1,6 +1,6 @@
 class UserAccount {
   readonly name: string;
-  private age: number;
+  protected age: number;
 
   constructor(name: string, age: number) {
     this.name = name;
@@ -15,10 +15,11 @@ class UserAccount {
 const gabi = new UserAccount('Gabi', 29)
 console.log(gabi)
 console.log(gabi.name)
+console.log(gabi.age)
 gabi.logDetails()
 
 class CharAccount extends UserAccount {
-  private nickname: string
+  public nickname: string
   readonly level: number
 
   constructor(nickname: string, level: number, name: string, age: number) {
