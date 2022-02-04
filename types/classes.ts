@@ -7,16 +7,24 @@ class UserAccount {
     this.age = age;
   }
 
+  get getName() {
+    console.log('---GET---')
+    return this.name
+  }
+
   logDetails(): void {
     console.log(`The use ${this.name} are ${this.age} years old. `)
   }
+
 }
 
 const gabi = new UserAccount('Gabi', 29)
 console.log(gabi)
 console.log(gabi.name)
-console.log(gabi.age)
+// console.log(gabi.age)
 gabi.logDetails()
+
+console.log((gabi.getName))
 
 class CharAccount extends UserAccount {
   public nickname: string
@@ -37,6 +45,6 @@ const hoffmann = new CharAccount('GabiHoffmann', 1000, 'Gabi', 29)
 console.log(hoffmann)
 console.log(hoffmann.nickname)
 console.log(hoffmann.level)
-hoffmann.level = 2000
+// hoffmann.level = 2000
 hoffmann.logDetails()
 hoffmann.logLevel()
