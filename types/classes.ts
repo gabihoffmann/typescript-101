@@ -36,6 +36,10 @@ class CharAccount extends UserAccount {
     this.level = level
   }
 
+  set setNickname(newNickname: string) {
+    this.nickname = newNickname
+  }
+
   logLevel(): void {
     console.log(`This player are ${this.nickname} and have ${this.level} xp  - ${this.age} - ${this.name}`)
   }
@@ -48,3 +52,5 @@ console.log(hoffmann.level)
 // hoffmann.level = 2000
 hoffmann.logDetails()
 hoffmann.logLevel()
+hoffmann.setNickname = 'HoffmannGabi'
+console.log(hoffmann.nickname)
