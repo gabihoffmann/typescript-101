@@ -54,3 +54,34 @@ hoffmann.logDetails()
 hoffmann.logLevel()
 hoffmann.setNickname = 'HoffmannGabi'
 console.log(hoffmann.nickname)
+
+
+abstract class Persona {
+  readonly id: number
+  name: string
+  age: number
+
+  constructor(i: number, n: string, a: number) {
+    this.id = i
+    this.name = n
+    this.age = a
+  }
+
+  showName(): void {
+    console.log(`Hello ${this.name}`)
+  }
+}
+
+// const persona = new Persona //Cannot create a instance of an abstract class
+
+class Student extends Persona {
+  classroom: string
+
+  constructor(id: number, name: string, age: number, c: string) {
+    super(id, name, age);
+    this.classroom = c
+  }
+}
+
+const Joseph = new Student(1, 'Joseph', 22, '22-B')
+Joseph.showName()
