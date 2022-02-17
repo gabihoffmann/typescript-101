@@ -1,3 +1,5 @@
+import { platform } from "os"
+
 //Interface
 interface Game {
   title: string
@@ -19,3 +21,18 @@ const myGame: Game = {
 
 console.log(myGame.title)
 myGame.getSimilar(myGame.title)
+
+interface DLC extends Game {
+  originalGame: Game,
+  newContent: string[]
+}
+
+const myGameSpecial: DLC = {
+  title: 'Spider Solitaire - Special Edition',
+  genre: 'solitaire',
+  platform: ['web', 'windows', 'mobile'],
+  newContent: ['Special cards', 'Optional backgrounds'],
+  originalGame: myGame
+}
+
+console.log(myGameSpecial.title)
