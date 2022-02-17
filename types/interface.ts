@@ -1,5 +1,3 @@
-import { platform } from "os"
-
 //Interface
 interface Game {
   title: string
