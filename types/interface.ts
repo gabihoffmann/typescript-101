@@ -6,7 +6,7 @@ interface Game {
   description?: string
   readonly genre: string
   platform: string[]
-  getSimilar: (title: string) => void
+  getSimilar?: (title: string) => void
 }
 
 const myGame: Game = {
@@ -20,7 +20,9 @@ const myGame: Game = {
 }
 
 console.log(myGame.title)
-myGame.getSimilar(myGame.title)
+if (myGame.getSimilar) {
+  myGame.getSimilar(myGame.title)
+}
 
 interface DLC extends Game {
   originalGame: Game,
