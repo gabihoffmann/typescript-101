@@ -1,8 +1,8 @@
 //Interface
 interface Game {
   title: string
-  description: string
-  genre: string
+  description?: string
+  readonly genre: string
   platform: string[]
   getSimilar: (title: string) => void
 }
