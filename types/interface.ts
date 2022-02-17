@@ -38,3 +38,15 @@ const myGameSpecial: DLC = {
 }
 
 console.log(myGameSpecial.title)
+
+class previewGame implements Game {
+  title: string;
+  genre: string;
+  platform: string[];
+
+  constructor(t: string, g: string, p: string[]) {
+    this.title = t
+    this.genre = g
+    this.platform = p
+  }
+}
